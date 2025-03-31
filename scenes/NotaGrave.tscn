@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://b8i80yrwxpmyo"]
+
+[ext_resource type="Script" uid="uid://nfgy8gr2bwkm" path="res://scripts/Nota.gd" id="1_5ekdr"]
+[ext_resource type="Texture2D" uid="uid://dvt25dl0fatw7" path="res://assets/img/full-circle.svg" id="2_5ekdr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ylhuh"]
+radius = 16.0
+
+[node name="Nota" type="Area2D"]
+script = ExtResource("1_5ekdr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("2_5ekdr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ylhuh")

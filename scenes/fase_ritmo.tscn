@@ -11,7 +11,7 @@ stream = ExtResource("1_lfvql")
 autoplay = true
 
 [node name="SpawnArea" type="Marker2D" parent="."]
-position = Vector2(587, 11)
+position = Vector2(575, 7)
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
