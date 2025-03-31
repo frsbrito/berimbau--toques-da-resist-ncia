@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://birmldqa1ldw0"]
+
+[ext_resource type="Script" uid="uid://76hhwjtm0b7d" path="res://scripts/fase_ritmo.gd" id="1_l2pbn"]
+[ext_resource type="AudioStream" uid="uid://cve7gxxeliclu" path="res://assets/audio/Toque-de-angola.ogg" id="1_lfvql"]
+
+[node name="FaseRitmo" type="Node2D"]
+script = ExtResource("1_l2pbn")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_lfvql")
+autoplay = true
+
+[node name="SpawnArea" type="Marker2D" parent="."]
+position = Vector2(587, 11)
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
